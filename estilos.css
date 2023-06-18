@@ -1,0 +1,107 @@
+@import url('https://fonts.cdnfonts.com/css/the-amazing-spider-man');
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(
+      to bottom,
+      #021b79,
+      #C9E8F8 
+    );
+  }
+  
+  img{
+    width: max-content;
+  }
+  
+  h1 {
+    font-family: 'THE AMAZING SPIDER-MAN', sans-serif;
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #ffcc66;
+    text-shadow: 5px 5px 0 red;
+    margin: 5px
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  
+  .container .spiderman {
+    width: fit-content;
+    vertical-align:top;
+    margin-top: -115px;
+    animation-name: animar;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .shadow {
+    width: 200px;
+    height: 20px;
+    margin: 20px 0;
+    margin-left: 36px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    animation: sombra 1.5s alternate infinite;
+  }
+  
+  @keyframes animar {
+    from {
+      transform: translateY(-100px);
+    }
+  
+    to {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes sombra {
+    0% {
+      transform: scale(1.2);
+      opacity: 0.4;
+    }
+  
+    100% {
+      transform: scale(0.6);
+      opacity: 0.9;
+    }
+  }
+
+
+
+  
+
+  @media (max-width: 658px) {
+    h1{
+      font-size: 45px;
+      letter-spacing: 1px;
+    }
+    
+    .container .spiderman{
+      width: 80%;
+      margin-top: -72px;
+    }
+
+    .shadow {
+      width: 150px;
+      margin-left: 20px;
+    }
+
+    @keyframes animar {
+      from {
+        transform: translateY(-50px);
+      }
+    
+      to {
+        transform: translateY(0px);
+      }
+    }
+  }
+  
